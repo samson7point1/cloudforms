@@ -7,6 +7,13 @@
 # Place in crontab - example:
 # 30 00 * * 6 /root/vmdbbackup.sh >/dev/null 2>&1 #weekly vmdb backup
 
+# As a pre-requisite a Postgres DB password file should be created at:
+# /root/.pgpass
+# With the following single line content:
+# localhost:5432:vmdb_production:root:<cloudforms_db_plaintext_pass>
+# 
+# Where <cloudforms_db_plaintext_pass> is the plain text password for the CloudForms database as configured
+# during initial setup - note this is a separate credential from the CloudForms admin account.
 
 # Function: f_CheckMount
 # Arguments: 
